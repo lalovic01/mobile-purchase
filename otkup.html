@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Procenite vrednost vašeg mobilnog telefona. Brza i realna procena za sve brendove telefona.">
+  <title>Otkup Telefona - Mare Telefoni | Besplatna Procena</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="index.html" class="logo">
+        <i class="fas fa-mobile-alt"></i>
+        Mare Telefoni
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="otkup.html" class="active">Otkup Telefona</a></li>
+        <li><a href="o-nama.html">O Nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+      <button class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Procenite Vaš Telefon</h1>
+        <p>Popunite formu i dobijte realnu ponudu u najkraćem roku</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-title">
+      <h2>Kako Procenjujemo Telefone?</h2>
+      <p>Naša procena se zasniva na nekoliko ključnih faktora</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Model i Brend</h3>
+        <p>Tržišna vrednost modela, popularnost brenda i trenutna potražnja utiču na osnovnu cenu.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3>Stanje Uređaja</h3>
+        <p>Fizičko i funkcionalno stanje telefona - ekran, baterija, kamera i ostali delovi.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Starost</h3>
+        <p>Vreme od nabavke i tehnološka aktuelnost modela određuju finalna vrednost.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-box"></i>
+        </div>
+        <h3>Dodatna Oprema</h3>
+        <p>Originalna kutija, punjač, slušalice i dokaze o kupovini povećavaju vrednost.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="padding-top: 3rem;">
+    <div class="section-title">
+      <h2>Forma za Procenu</h2>
+      <p>Unesite podatke o vašem telefonu za besplatnu procenu</p>
+    </div>
+    <div class="form-container">
+      <form id="evaluation-form">
+        <div class="form-group">
+          <label for="phone-model">Model Telefona *</label>
+          <input type="text" id="phone-model" placeholder="npr. iPhone 13 Pro, Samsung Galaxy S22">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="brand">Brend *</label>
+            <select id="brand">
+              <option value="">Izaberite brend</option>
+              <option value="apple">Apple</option>
+              <option value="samsung">Samsung</option>
+              <option value="huawei">Huawei</option>
+              <option value="xiaomi">Xiaomi</option>
+              <option value="oneplus">OnePlus</option>
+              <option value="google">Google</option>
+              <option value="sony">Sony</option>
+              <option value="ostalo">Ostalo</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="condition">Stanje Telefona *</label>
+            <select id="condition">
+              <option value="">Izaberite stanje</option>
+              <option value="kao-novo">Kao novo (bez oštećenja)</option>
+              <option value="odlicno">Odlično (minimalni tragovi)</option>
+              <option value="dobro">Dobro (vidljivi tragovi)</option>
+              <option value="zadovoljavajuce">Zadovoljavajuće (oštećenja)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Starost Telefona</label>
+            <select id="age">
+              <option value="">Izaberite starost</option>
+              <option value="0-6">0-6 meseci</option>
+              <option value="6-12">6-12 meseci</option>
+              <option value="12-24">1-2 godine</option>
+              <option value="24+">Preko 2 godine</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="accessories">Dodatna Oprema</label>
+            <select id="accessories">
+              <option value="komplet">Komplet (kutija, punjač, sve)</option>
+              <option value="delimicno">Delimično (neka oprema)</option>
+              <option value="samo-telefon">Samo telefon</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Dodatne Napomene</label>
+          <textarea id="notes" placeholder="Opišite eventualne nedostatke, specifičnosti ili dodatne informacije..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Vaše Ime *</label>
+            <input type="text" id="name" placeholder="Ime i prezime">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Kontakt Telefon *</label>
+            <input type="tel" id="phone" placeholder="+381 64 123 4567">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Adresa (opciono)</label>
+          <input type="email" id="email" placeholder="vas@email.com">
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Pošalji Procenu</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Imate Pitanja o Otkupu?</h2>
+      <p>Naš tim je spreman da odgovori na sva vaša pitanja</p>
+      <a href="kontakt.html" class="btn btn-primary">Kontaktirajte Nas</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mare Telefoni</h3>
+          <p>Vaš pouzdan partner za otkup mobilnih telefona u celoj Srbiji.</p>
+          <p><i class="fas fa-map-marker-alt"></i> Pančevo, Srbija</p>
+        </div>
+        <div class="footer-section">
+          <h3>Linkovi</h3>
+          <a href="index.html">Početna</a>
+          <a href="otkup.html">Otkup Telefona</a>
+          <a href="o-nama.html">O Nama</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div class="footer-section">
+          <h3>Kontakt</h3>
+          <p><i class="fas fa-phone"></i> +381 64 123 4567</p>
+          <p><i class="fas fa-envelope"></i> info@maretelefoni.rs</p>
+        </div>
+        <div class="footer-section">
+          <h3>Radno Vreme</h3>
+          <p>Ponedeljak - Petak: 09:00 - 20:00</p>
+          <p>Subota: 10:00 - 18:00</p>
+          <p>Nedelja: Po dogovoru</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Mare Telefoni. Sva prava zadržana.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
