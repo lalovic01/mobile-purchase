@@ -10,9 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
       if (navLinks.classList.contains('active')) {
         icon.classList.remove('fa-bars');
         icon.classList.add('fa-times');
+        this.setAttribute('aria-label', 'Zatvori navigacioni meni');
       } else {
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
+        this.setAttribute('aria-label', 'Otvori navigacioni meni');
       }
     });
   }
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const icon = mobileToggle.querySelector('i');
         icon.classList.remove('fa-times');
         icon.classList.add('fa-bars');
+        mobileToggle.setAttribute('aria-label', 'Otvori navigacioni meni');
       }
     });
   });

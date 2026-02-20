@@ -6,7 +6,12 @@
   <meta name="description" content="Mare Telefoni - Pouzdana kompanija za otkup mobilnih telefona. Pančevo i cela Srbija. Saznajte više o nama.">
   <title>O Nama - Mare Telefoni | Naša Priča i Vrednosti</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
   <header>
@@ -21,11 +26,13 @@
         <li><a href="o-nama.html" class="active">O Nama</a></li>
         <li><a href="kontakt.html">Kontakt</a></li>
       </ul>
-      <button class="mobile-toggle">
+      <button class="mobile-toggle" aria-label="Otvori navigacioni meni">
         <i class="fas fa-bars"></i>
       </button>
     </nav>
   </header>
+
+  <main>
 
   <section class="hero" style="padding: 4rem 0;">
     <div class="container">
@@ -39,7 +46,7 @@
   <section class="container">
     <div class="about-content">
       <div class="about-text">
-        <h3>Ko Smo Mi?</h3>
+        <h2>Ko Smo Mi?</h2>
         <p>Mare Telefoni je kompanija posvećena pružanju poštenih i transparentnih usluga otkupa mobilnih telefona na teritoriji cele Srbije. Sa sedištem u Pančevu, izgradili smo reputaciju kao pouzdan partner za sve koji žele da prodaju svoj telefon brzo, sigurno i po fer ceni.</p>
         <p>Naša misija je jednostavna: omogućiti vam da dobijete najbolju moguću vrednost za vaš uređaj, bez komplikacija i skrivenih troškova. Verujemo u potpunu transparentnost procesa i pružanje vrhunske korisničke podrške.</p>
         <p>Svaki telefon koji otkupimo prolazi kroz detaljnu procenu, a svaka transakcija se obavlja sa najvećom pažnjom prema sigurnosti vaših podataka i zadovoljstvu kao kupca.</p>
@@ -134,6 +141,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -167,6 +176,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

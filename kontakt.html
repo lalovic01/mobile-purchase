@@ -6,7 +6,12 @@
   <meta name="description" content="Kontaktirajte Mare Telefoni. Sedište u Pančevu, poslovanje u celoj Srbiji. Odgovaramo brzo na sva pitanja.">
   <title>Kontakt - Mare Telefoni | Pančevo, Srbija</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
   <header>
@@ -21,11 +26,13 @@
         <li><a href="o-nama.html">O Nama</a></li>
         <li><a href="kontakt.html" class="active">Kontakt</a></li>
       </ul>
-      <button class="mobile-toggle">
+      <button class="mobile-toggle" aria-label="Otvori navigacioni meni">
         <i class="fas fa-bars"></i>
       </button>
     </nav>
   </header>
+
+  <main>
 
   <section class="hero" style="padding: 4rem 0;">
     <div class="container">
@@ -40,25 +47,25 @@
     <div class="contact-info">
       <div class="contact-card">
         <i class="fas fa-phone-alt"></i>
-        <h3>Telefon</h3>
+        <h2>Telefon</h2>
         <p>+381 64 123 4567</p>
         <p style="font-size: 0.9rem; margin-top: 0.5rem;">Pozovite nas radnim danima</p>
       </div>
       <div class="contact-card">
         <i class="fas fa-envelope"></i>
-        <h3>Email</h3>
+        <h2>Email</h2>
         <p>info@maretelefoni.rs</p>
         <p style="font-size: 0.9rem; margin-top: 0.5rem;">Odgovaramo u roku od 24h</p>
       </div>
       <div class="contact-card">
         <i class="fas fa-map-marker-alt"></i>
-        <h3>Lokacija</h3>
+        <h2>Lokacija</h2>
         <p>Pančevo, Srbija</p>
         <p style="font-size: 0.9rem; margin-top: 0.5rem;">Poslujemo u celoj Srbiji</p>
       </div>
       <div class="contact-card">
         <i class="fas fa-clock"></i>
-        <h3>Radno Vreme</h3>
+        <h2>Radno Vreme</h2>
         <p>Pon-Pet: 09:00-20:00</p>
         <p style="font-size: 0.9rem; margin-top: 0.5rem;">Subotom: 10:00-18:00</p>
       </div>
@@ -152,6 +159,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div class="container">
       <div class="footer-content">
@@ -185,6 +194,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
