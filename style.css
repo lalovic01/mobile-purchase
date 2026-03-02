@@ -58,7 +58,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .logo {
@@ -68,6 +68,12 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 .logo i {
