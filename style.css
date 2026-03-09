@@ -67,14 +67,12 @@ nav {
   transition: transform 0.3s ease;
 }
 
-.logo:hover {
-  transform: scale(1.05);
-}
-
 .logo-img {
   height: 115px;
   width: auto;
   object-fit: contain;
+  transform: scale(2);
+  margin-left: 24%;
 }
 
 .logo i {
