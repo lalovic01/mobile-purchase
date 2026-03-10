@@ -1,3 +1,8 @@
+// EmailJS Konfiguracija
+const EMAILJS_SERVICE_ID = 'service_qillbeu';
+const TEMPLATE_EVALUATION = 'template_2w1mcio'; // Zamenite sa pravim template ID
+const TEMPLATE_CONTACT = 'template_0w6vxwn'; // Zamenite sa pravim template ID
+
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
   const mobileToggle = document.querySelector('.mobile-toggle');
@@ -76,9 +81,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       if (isValid) {
-        // Show success message
-        alert('Hvala!Ваша procena je uspešno poslata. Kontaktiraćemo vas uskoro.');
-        evaluationForm.reset();
+        // Priprema emailjs parametara
+        const templateParams = {
+          from_name: name.value,
+          phone_number: phone.value,
+          email: document.getElementById('email').value || 'Nije navedeno',
+          phone_model: phoneModel.value,
+          brand: document.getElementById('brand').value || 'Nije navedeno',
+          condition: condition.value,
+          age: document.getElementById('age').value || 'Nije navedeno',
+          accessories: document.getElementById('accessories').value || 'Nije navedeno',
+          notes: document.getElementById('notes').value || 'Nema dodatnih napomena'
+        };
+
+        // Pošalji email preko EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_EVALUATION, templateParams)
+          .then(function(response) {
+            alert('Hvala! Vaša procena je uspešno poslata. Kontaktiraćemo vas uskoro.');
+            evaluationForm.reset();
+          }, function(error) {
+            alert('Došlo je do greške pri slanju. Molimo pokušajte ponovo ili nas kontaktirajte telefonom.');
+            console.error('EmailJS Error:', error);
+          });
       }
     });
   }
@@ -119,8 +143,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       if (isValid) {
-        alert('Hvala! Vaša poruka je uspešno poslata. Odgovorićemo vam uskoro.');
-        contactForm.reset();
+        // Priprema emailjs parametara
+        const templateParams = {
+          from_name: name.value,
+          from_email: email.value,
+          phone: document.getElementById('contact-phone').value || 'Nije navedeno',
+          subject: document.getElementById('contact-subject').value || 'Opšte pitanje',
+          message: message.value
+        };
+
+        // Pošalji email preko EmailJS
+        emailjs.send(EMAILJS_SERVICE_ID, TEMPLATE_CONTACT, templateParams)
+          .then(function(response) {
+            alert('Hvala! Vaša poruka je uspešno poslata. Odgovorićemo vam uskoro.');
+            contactForm.reset();
+          }, function(error) {
+            alert('Došlo je do greške pri slanju. Molimo pokušajte ponovo ili nas kontaktirajte telefonom.');
+            console.error('EmailJS Error:', error);
+          });
       }
     });
   }
